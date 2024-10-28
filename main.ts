@@ -4,9 +4,31 @@ namespace SpriteKind {
     export const Door6 = SpriteKind.create()
     export const Door3 = SpriteKind.create()
     export const Door4 = SpriteKind.create()
+    export const Door7 = SpriteKind.create()
+    export const Door8 = SpriteKind.create()
+}
+function destroyAllDoors () {
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo2)
+    sprites.destroy(doorTo3)
+    sprites.destroy(doorTo4)
+    sprites.destroy(doorTo6)
+    sprites.destroy(doorTo7)
+    sprites.destroy(doorTo8)
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo1)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door1, function (sprite, otherSprite) {
-    sprites.destroy(doorTo1)
+    destroyAllDoors()
     scene.setBackgroundImage(assets.image`Room 1`)
     doorTo2 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -29,9 +51,70 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door1, function (sprite, otherSp
     mySprite.setPosition(135, 59)
     doorTo2.setPosition(155, 60)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door3, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room3`)
+    doorTo2 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door2)
+    doorTo4 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door4)
+    doorTo8 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door8)
+    mySprite.setPosition(24, 62)
+    doorTo2.setPosition(5, 60)
+    doorTo8.setPosition(80, 115)
+    doorTo4.setPosition(155, 60)
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door2, function (sprite, otherSprite) {
-    sprites.destroy(doorTo2)
-    sprites.destroy(doorTo6)
+    destroyAllDoors()
     scene.setBackgroundImage(assets.image`Room2`)
     doorTo1 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -51,14 +134,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door2, function (sprite, otherSp
         b c b b b b b b b b b b b b c b 
         b b b b b b b b b b b b b b b b 
         `, SpriteKind.Door1)
-    mySprite.setPosition(24, 62)
-    doorTo1.setPosition(5, 60)
-})
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Door4, function (sprite, otherSprite) {
-    sprites.destroy(doorTo2)
-    sprites.destroy(doorTo6)
-    scene.setBackgroundImage(assets.image`Room2`)
-    doorTo1 = sprites.create(img`
+    doorTo7 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
         b c b e 4 4 4 4 4 4 4 4 e b c b 
         b b e 4 4 4 4 4 4 4 4 4 4 e b b 
@@ -75,10 +151,37 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door4, function (sprite, otherSp
         b b b c c c c c c c c c c b b b 
         b c b b b b b b b b b b b b c b 
         b b b b b b b b b b b b b b b b 
-        `, SpriteKind.Door1)
+        `, SpriteKind.Door7)
+    doorTo3 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door3)
     mySprite.setPosition(24, 62)
     doorTo1.setPosition(5, 60)
+    doorTo7.setPosition(80, 115)
+    doorTo3.setPosition(155, 60)
 })
+// Bottom: 80,115
+// Right: 155,60
+// Left: 5,60
+let doorTo8: Sprite = null
+let doorTo7: Sprite = null
+let doorTo4: Sprite = null
+let doorTo3: Sprite = null
 let doorTo1: Sprite = null
 let doorTo6: Sprite = null
 let doorTo2: Sprite = null
