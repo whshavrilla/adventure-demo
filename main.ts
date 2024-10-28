@@ -6,6 +6,7 @@ namespace SpriteKind {
     export const Door4 = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door1, function (sprite, otherSprite) {
+    sprites.destroy(doorTo1)
     scene.setBackgroundImage(assets.image`Room 1`)
     doorTo2 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
