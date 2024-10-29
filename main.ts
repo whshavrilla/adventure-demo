@@ -34,7 +34,9 @@ namespace SpriteKind {
 /**
  * Right: 155,60
  */
-// Top: 80,5
+/**
+ * Top: 80,5
+ */
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door6, function (sprite, otherSprite) {
     destroyAllDoors()
     scene.setBackgroundImage(assets.image`room6`)
@@ -245,7 +247,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door15, function (sprite, otherS
     doorTo14.setPosition(5, 60)
     doorTo10.setPosition(80, 5)
 })
-function destroyAllDoors () {
+function destroyAllDoors() {
     sprites.destroy(doorTo1)
     sprites.destroy(doorTo2)
     sprites.destroy(doorTo3)
