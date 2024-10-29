@@ -99,6 +99,30 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door6, function (sprite, otherSp
     doorTo1.setPosition(80, 5)
     doorTo11.setPosition(80, 115)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door18, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room18`)
+    doorTo13 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door13)
+    mySprite.setPosition(80, 60)
+    doorTo13.setPosition(80, 5)
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door13, function (sprite, otherSprite) {
     destroyAllDoors()
     scene.setBackgroundImage(assets.image`room13`)
@@ -156,10 +180,29 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door13, function (sprite, otherS
         b c b b b b b b b b b b b b c b 
         b b b b b b b b b b b b b b b b 
         `, SpriteKind.Door14)
+    doorTo18 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door18)
     mySprite.setPosition(80, 60)
     doorTo12.setPosition(5, 60)
     doorTo8.setPosition(80, 5)
     doorTo14.setPosition(155, 60)
+    doorTo18.setPosition(80, 115)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door15, function (sprite, otherSprite) {
     destroyAllDoors()
@@ -220,7 +263,7 @@ function destroyAllDoors () {
     sprites.destroy(doorTo13)
     sprites.destroy(doorTo14)
     sprites.destroy(doorTo15)
-    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo18)
     sprites.destroy(doorTo1)
     sprites.destroy(doorTo1)
 }
@@ -969,15 +1012,16 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door11, function (sprite, otherS
     doorTo6.setPosition(80, 5)
 })
 let doorTo15: Sprite = null
-let doorTo13: Sprite = null
 let doorTo9: Sprite = null
 let doorTo5: Sprite = null
 let doorTo4: Sprite = null
 let doorTo3: Sprite = null
 let doorTo10: Sprite = null
+let doorTo18: Sprite = null
 let doorTo14: Sprite = null
 let doorTo8: Sprite = null
 let doorTo12: Sprite = null
+let doorTo13: Sprite = null
 let doorTo11: Sprite = null
 let doorTo1: Sprite = null
 let doorTo7: Sprite = null
