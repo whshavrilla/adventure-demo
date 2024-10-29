@@ -10,6 +10,20 @@ namespace SpriteKind {
     export const Door9 = SpriteKind.create()
     export const Door10 = SpriteKind.create()
     export const Door11 = SpriteKind.create()
+    export const Door12 = SpriteKind.create()
+    export const Door13 = SpriteKind.create()
+    export const Door14 = SpriteKind.create()
+    export const Door15 = SpriteKind.create()
+    export const Door16 = SpriteKind.create()
+    export const Door17 = SpriteKind.create()
+    export const Door18 = SpriteKind.create()
+    export const Door19 = SpriteKind.create()
+    export const Door20 = SpriteKind.create()
+    export const Door21 = SpriteKind.create()
+    export const Door22 = SpriteKind.create()
+    export const Door23 = SpriteKind.create()
+    export const Door24 = SpriteKind.create()
+    export const Door25 = SpriteKind.create()
 }
 /**
  * Bottom: 80,115
@@ -20,9 +34,7 @@ namespace SpriteKind {
 /**
  * Right: 155,60
  */
-/**
- * Top: 80,5
- */
+// Top: 80,5
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door6, function (sprite, otherSprite) {
     destroyAllDoors()
     scene.setBackgroundImage(assets.image`room6`)
@@ -85,6 +97,154 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door6, function (sprite, otherSp
     doorTo1.setPosition(80, 5)
     doorTo11.setPosition(80, 115)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door18, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room18`)
+    doorTo13 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door13)
+    mySprite.setPosition(80, 60)
+    doorTo13.setPosition(80, 5)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door13, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room13`)
+    doorTo12 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door12)
+    doorTo8 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door8)
+    doorTo14 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door14)
+    doorTo18 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door18)
+    mySprite.setPosition(80, 60)
+    doorTo12.setPosition(5, 60)
+    doorTo8.setPosition(80, 5)
+    doorTo14.setPosition(155, 60)
+    doorTo18.setPosition(80, 115)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door15, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room15`)
+    doorTo14 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door14)
+    doorTo10 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door10)
+    mySprite.setPosition(80, 60)
+    doorTo14.setPosition(5, 60)
+    doorTo10.setPosition(80, 5)
+})
 function destroyAllDoors () {
     sprites.destroy(doorTo1)
     sprites.destroy(doorTo2)
@@ -97,14 +257,157 @@ function destroyAllDoors () {
     sprites.destroy(doorTo9)
     sprites.destroy(doorTo10)
     sprites.destroy(doorTo11)
-    sprites.destroy(doorTo1)
-    sprites.destroy(doorTo1)
-    sprites.destroy(doorTo1)
-    sprites.destroy(doorTo1)
-    sprites.destroy(doorTo1)
+    sprites.destroy(doorTo12)
+    sprites.destroy(doorTo13)
+    sprites.destroy(doorTo14)
+    sprites.destroy(doorTo15)
+    sprites.destroy(doorTo18)
     sprites.destroy(doorTo1)
     sprites.destroy(doorTo1)
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door7, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room7`)
+    doorTo6 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door6)
+    doorTo2 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door2)
+    doorTo8 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door8)
+    doorTo12 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door12)
+    mySprite.setPosition(80, 60)
+    doorTo6.setPosition(5, 60)
+    doorTo2.setPosition(80, 5)
+    doorTo8.setPosition(155, 60)
+    doorTo12.setPosition(80, 115)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door10, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room10`)
+    doorTo9 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door9)
+    doorTo5 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door5)
+    doorTo15 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door15)
+    mySprite.setPosition(80, 60)
+    doorTo9.setPosition(5, 60)
+    doorTo5.setPosition(80, 5)
+    doorTo15.setPosition(80, 115)
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door5, function (sprite, otherSprite) {
     destroyAllDoors()
     scene.setBackgroundImage(assets.image`room5`)
@@ -147,6 +450,68 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door5, function (sprite, otherSp
     mySprite.setPosition(80, 60)
     doorTo4.setPosition(5, 60)
     doorTo10.setPosition(80, 115)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door12, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room12`)
+    doorTo11 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door11)
+    doorTo7 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door7)
+    doorTo13 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door13)
+    mySprite.setPosition(80, 60)
+    doorTo11.setPosition(5, 60)
+    doorTo7.setPosition(80, 5)
+    doorTo13.setPosition(155, 60)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door1, function (sprite, otherSprite) {
     destroyAllDoors()
@@ -252,6 +617,149 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door3, function (sprite, otherSp
     doorTo2.setPosition(5, 60)
     doorTo8.setPosition(80, 115)
     doorTo4.setPosition(155, 60)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door14, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room14`)
+    doorTo13 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door13)
+    doorTo9 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door9)
+    doorTo15 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door15)
+    mySprite.setPosition(80, 60)
+    doorTo13.setPosition(5, 60)
+    doorTo9.setPosition(80, 5)
+    doorTo15.setPosition(155, 60)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door9, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room9`)
+    doorTo8 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door8)
+    doorTo4 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door4)
+    doorTo10 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door10)
+    doorTo14 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door14)
+    mySprite.setPosition(80, 60)
+    doorTo8.setPosition(5, 60)
+    doorTo4.setPosition(80, 5)
+    doorTo10.setPosition(155, 60)
+    doorTo14.setPosition(80, 115)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door2, function (sprite, otherSprite) {
     destroyAllDoors()
@@ -377,12 +885,141 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door4, function (sprite, otherSp
     doorTo9.setPosition(80, 115)
     doorTo5.setPosition(155, 60)
 })
-let doorTo10: Sprite = null
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door8, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room8`)
+    doorTo7 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door7)
+    doorTo3 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door3)
+    doorTo9 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door9)
+    doorTo13 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door13)
+    mySprite.setPosition(80, 60)
+    doorTo7.setPosition(5, 60)
+    doorTo3.setPosition(80, 5)
+    doorTo9.setPosition(155, 60)
+    doorTo13.setPosition(80, 115)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Door11, function (sprite, otherSprite) {
+    destroyAllDoors()
+    scene.setBackgroundImage(assets.image`room11`)
+    doorTo6 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door6)
+    doorTo12 = sprites.create(img`
+        b b b b b b b b b b b b b b b b 
+        b c b e 4 4 4 4 4 4 4 4 e b c b 
+        b b e 4 4 4 4 4 4 4 4 4 4 e b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b d 4 4 4 4 4 4 4 4 4 4 d b b 
+        b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
+        b b 4 4 d d d d d d d d 4 4 b b 
+        b b c 4 4 4 4 4 4 4 4 4 4 c b b 
+        b b b c c c c c c c c c c b b b 
+        b c b b b b b b b b b b b b c b 
+        b b b b b b b b b b b b b b b b 
+        `, SpriteKind.Door12)
+    mySprite.setPosition(80, 60)
+    doorTo12.setPosition(155, 60)
+    doorTo6.setPosition(80, 5)
+})
+let doorTo15: Sprite = null
 let doorTo9: Sprite = null
-let doorTo8: Sprite = null
 let doorTo5: Sprite = null
 let doorTo4: Sprite = null
 let doorTo3: Sprite = null
+let doorTo10: Sprite = null
+let doorTo18: Sprite = null
+let doorTo14: Sprite = null
+let doorTo8: Sprite = null
+let doorTo12: Sprite = null
+let doorTo13: Sprite = null
 let doorTo11: Sprite = null
 let doorTo1: Sprite = null
 let doorTo7: Sprite = null
