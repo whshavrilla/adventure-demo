@@ -37,6 +37,7 @@ namespace SpriteKind {
 // Top: 80,5
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door6, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room6`)
     doorTo7 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -556,6 +557,26 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door1, function (sprite, otherSp
     doorTo2.setPosition(155, 60)
     doorTo6.setPosition(80, 115)
 })
+function fillRoom () {
+    let list: number[] = []
+    fillRoomValue = randint(0, text_list.length - 1)
+    if (text_list[fillRoomValue] == "nothing") {
+        game.splash("nothing")
+    }
+    if (text_list[fillRoomValue] == "bats") {
+        game.splash("bats")
+    }
+    if (text_list[fillRoomValue] == "treasure") {
+        game.splash("treasure")
+    }
+    if (text_list[fillRoomValue] == "traps") {
+        game.splash("traps")
+    }
+    if (text_list[fillRoomValue] == "grue") {
+        game.splash("grue")
+    }
+    list.removeAt(fillRoomValue)
+}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door3, function (sprite, otherSprite) {
     destroyAllDoors()
     scene.setBackgroundImage(assets.image`room3`)
@@ -1009,6 +1030,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door11, function (sprite, otherS
     doorTo12.setPosition(155, 60)
     doorTo6.setPosition(80, 5)
 })
+let fillRoomValue = 0
 let doorTo15: Sprite = null
 let doorTo9: Sprite = null
 let doorTo5: Sprite = null
@@ -1023,6 +1045,7 @@ let doorTo13: Sprite = null
 let doorTo11: Sprite = null
 let doorTo1: Sprite = null
 let doorTo7: Sprite = null
+let text_list: string[] = []
 let doorTo6: Sprite = null
 let doorTo2: Sprite = null
 let mySprite: Sprite = null
@@ -1085,3 +1108,20 @@ doorTo6 = sprites.create(img`
     `, SpriteKind.Door6)
 doorTo6.setPosition(80, 115)
 doorTo2.setPosition(155, 60)
+text_list = [
+"treasure",
+"bats",
+"traps",
+"grue",
+"traps",
+"traps",
+"bats",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing"
+]
