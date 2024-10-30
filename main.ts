@@ -25,15 +25,6 @@ namespace SpriteKind {
     export const Door24 = SpriteKind.create()
     export const Door25 = SpriteKind.create()
 }
-/**
- * Bottom: 80,115
- */
-/**
- * Left: 5,60
- */
-/**
- * Right: 155,60
- */
 // Top: 80,5
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door6, function (sprite, otherSprite) {
     destroyAllDoors()
@@ -124,6 +115,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door18, function (sprite, otherS
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door13, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room13`)
     doorTo12 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -205,6 +197,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door13, function (sprite, otherS
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door15, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room15`)
     doorTo14 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -268,6 +261,7 @@ function destroyAllDoors () {
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door7, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room7`)
     doorTo6 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -349,6 +343,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door7, function (sprite, otherSp
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door10, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room10`)
     doorTo9 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -411,6 +406,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door10, function (sprite, otherS
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door5, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room5`)
     doorTo4 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -454,6 +450,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door5, function (sprite, otherSp
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door12, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room12`)
     doorTo11 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -516,6 +513,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door12, function (sprite, otherS
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door1, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`Room 1`)
     doorTo2 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -558,27 +556,27 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door1, function (sprite, otherSp
     doorTo6.setPosition(80, 115)
 })
 function fillRoom () {
-    let list: number[] = []
-    fillRoomValue = randint(0, text_list.length - 1)
-    if (text_list[fillRoomValue] == "nothing") {
+    fillRoomValue = randint(0, room_Options.length - 1)
+    if (room_Options[fillRoomValue] == "nothing") {
         game.splash("nothing")
     }
-    if (text_list[fillRoomValue] == "bats") {
+    if (room_Options[fillRoomValue] == "bats") {
         game.splash("bats")
     }
-    if (text_list[fillRoomValue] == "treasure") {
+    if (room_Options[fillRoomValue] == "treasure") {
         game.splash("treasure")
     }
-    if (text_list[fillRoomValue] == "traps") {
+    if (room_Options[fillRoomValue] == "traps") {
         game.splash("traps")
     }
-    if (text_list[fillRoomValue] == "grue") {
+    if (room_Options[fillRoomValue] == "grue") {
         game.splash("grue")
     }
-    list.removeAt(fillRoomValue)
+    room_Options.removeAt(fillRoomValue)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door3, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room3`)
     doorTo2 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -641,6 +639,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door3, function (sprite, otherSp
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door14, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room14`)
     doorTo13 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -703,6 +702,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door14, function (sprite, otherS
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door9, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room9`)
     doorTo8 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -784,6 +784,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door9, function (sprite, otherSp
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door2, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`Room2`)
     doorTo1 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -846,6 +847,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door2, function (sprite, otherSp
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door4, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room4`)
     doorTo3 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -908,6 +910,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door4, function (sprite, otherSp
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door8, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room8`)
     doorTo7 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -989,6 +992,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door8, function (sprite, otherSp
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door11, function (sprite, otherSprite) {
     destroyAllDoors()
+    fillRoom()
     scene.setBackgroundImage(assets.image`room11`)
     doorTo6 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
@@ -1045,7 +1049,7 @@ let doorTo13: Sprite = null
 let doorTo11: Sprite = null
 let doorTo1: Sprite = null
 let doorTo7: Sprite = null
-let text_list: string[] = []
+let room_Options: string[] = []
 let doorTo6: Sprite = null
 let doorTo2: Sprite = null
 let mySprite: Sprite = null
@@ -1108,7 +1112,7 @@ doorTo6 = sprites.create(img`
     `, SpriteKind.Door6)
 doorTo6.setPosition(80, 115)
 doorTo2.setPosition(155, 60)
-text_list = [
+room_Options = [
 "treasure",
 "bats",
 "traps",
