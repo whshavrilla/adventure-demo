@@ -25,8 +25,8 @@ namespace SpriteKind {
     export const Door24 = SpriteKind.create()
     export const Door25 = SpriteKind.create()
 }
-// Top: 80,5
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door6, function (sprite, otherSprite) {
+    roomNumber = 6
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room6`)
@@ -90,6 +90,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door6, function (sprite, otherSp
     doorTo11.setPosition(80, 115)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door18, function (sprite, otherSprite) {
+    roomNumber = 18
     destroyAllDoors()
     scene.setBackgroundImage(assets.image`room18`)
     doorTo13 = sprites.create(img`
@@ -114,6 +115,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door18, function (sprite, otherS
     doorTo13.setPosition(80, 5)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door13, function (sprite, otherSprite) {
+    roomNumber = 13
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room13`)
@@ -196,6 +198,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door13, function (sprite, otherS
     doorTo18.setPosition(80, 115)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door15, function (sprite, otherSprite) {
+    roomNumber = 15
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room15`)
@@ -239,6 +242,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door15, function (sprite, otherS
     doorTo14.setPosition(5, 60)
     doorTo10.setPosition(80, 5)
 })
+function RandomizeRooms () {
+    for (let index = 0; index <= 15; index++) {
+        room_contents[index + 1] = room_Options.removeAt(randint(0, room_Options.length - 1))
+    }
+}
 function destroyAllDoors () {
     sprites.destroy(doorTo1)
     sprites.destroy(doorTo2)
@@ -260,6 +268,7 @@ function destroyAllDoors () {
     sprites.destroy(doorTo1)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door7, function (sprite, otherSprite) {
+    roomNumber = 7
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room7`)
@@ -342,6 +351,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door7, function (sprite, otherSp
     doorTo12.setPosition(80, 115)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door10, function (sprite, otherSprite) {
+    roomNumber = 10
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room10`)
@@ -405,6 +415,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door10, function (sprite, otherS
     doorTo15.setPosition(80, 115)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door5, function (sprite, otherSprite) {
+    roomNumber = 5
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room5`)
@@ -449,6 +460,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door5, function (sprite, otherSp
     doorTo10.setPosition(80, 115)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door12, function (sprite, otherSprite) {
+    roomNumber = 12
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room12`)
@@ -512,6 +524,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door12, function (sprite, otherS
     doorTo13.setPosition(155, 60)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door1, function (sprite, otherSprite) {
+    roomNumber = 1
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`Room 1`)
@@ -556,25 +569,24 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door1, function (sprite, otherSp
     doorTo6.setPosition(80, 115)
 })
 function fillRoom () {
-    fillRoomValue = randint(0, room_Options.length - 1)
-    if (room_Options[fillRoomValue] == "nothing") {
+    if (room_contents[roomNumber] == "nothing") {
         game.splash("nothing")
     }
-    if (room_Options[fillRoomValue] == "bats") {
+    if (room_contents[roomNumber] == "bats") {
         game.splash("bats")
     }
-    if (room_Options[fillRoomValue] == "treasure") {
+    if (room_contents[roomNumber] == "treasure") {
         game.splash("treasure")
     }
-    if (room_Options[fillRoomValue] == "traps") {
+    if (room_contents[roomNumber] == "traps") {
         game.splash("traps")
     }
-    if (room_Options[fillRoomValue] == "grue") {
+    if (room_contents[roomNumber] == "grue") {
         game.splash("grue")
     }
-    room_Options.removeAt(fillRoomValue)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door3, function (sprite, otherSprite) {
+    roomNumber = 3
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room3`)
@@ -638,6 +650,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door3, function (sprite, otherSp
     doorTo4.setPosition(155, 60)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door14, function (sprite, otherSprite) {
+    roomNumber = 14
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room14`)
@@ -701,6 +714,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door14, function (sprite, otherS
     doorTo15.setPosition(155, 60)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door9, function (sprite, otherSprite) {
+    roomNumber = 9
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room9`)
@@ -783,6 +797,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door9, function (sprite, otherSp
     doorTo14.setPosition(80, 115)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door2, function (sprite, otherSprite) {
+    roomNumber = 2
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`Room2`)
@@ -846,6 +861,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door2, function (sprite, otherSp
     doorTo3.setPosition(155, 60)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door4, function (sprite, otherSprite) {
+    roomNumber = 4
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room4`)
@@ -909,6 +925,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door4, function (sprite, otherSp
     doorTo5.setPosition(155, 60)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door8, function (sprite, otherSprite) {
+    roomNumber = 8
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room8`)
@@ -991,6 +1008,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door8, function (sprite, otherSp
     doorTo13.setPosition(80, 115)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Door11, function (sprite, otherSprite) {
+    roomNumber = 11
     destroyAllDoors()
     fillRoom()
     scene.setBackgroundImage(assets.image`room11`)
@@ -1034,26 +1052,27 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Door11, function (sprite, otherS
     doorTo12.setPosition(155, 60)
     doorTo6.setPosition(80, 5)
 })
-let fillRoomValue = 0
 let doorTo15: Sprite = null
 let doorTo9: Sprite = null
+let doorTo6: Sprite = null
 let doorTo5: Sprite = null
 let doorTo4: Sprite = null
 let doorTo3: Sprite = null
+let doorTo2: Sprite = null
 let doorTo10: Sprite = null
 let doorTo18: Sprite = null
 let doorTo14: Sprite = null
 let doorTo8: Sprite = null
 let doorTo12: Sprite = null
-let doorTo13: Sprite = null
 let doorTo11: Sprite = null
 let doorTo1: Sprite = null
 let doorTo7: Sprite = null
+let roomNumber = 0
+let room_contents: string[] = []
 let room_Options: string[] = []
-let doorTo6: Sprite = null
-let doorTo2: Sprite = null
+let doorTo13: Sprite = null
 let mySprite: Sprite = null
-scene.setBackgroundImage(assets.image`Room 1`)
+scene.setBackgroundImage(assets.image`room18`)
 mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -1074,7 +1093,7 @@ mySprite = sprites.create(img`
     `, SpriteKind.Player)
 mySprite.setStayInScreen(true)
 controller.moveSprite(mySprite)
-doorTo2 = sprites.create(img`
+doorTo13 = sprites.create(img`
     b b b b b b b b b b b b b b b b 
     b c b e 4 4 4 4 4 4 4 4 e b c b 
     b b e 4 4 4 4 4 4 4 4 4 4 e b b 
@@ -1091,27 +1110,8 @@ doorTo2 = sprites.create(img`
     b b b c c c c c c c c c c b b b 
     b c b b b b b b b b b b b b c b 
     b b b b b b b b b b b b b b b b 
-    `, SpriteKind.Door2)
-doorTo6 = sprites.create(img`
-    b b b b b b b b b b b b b b b b 
-    b c b e 4 4 4 4 4 4 4 4 e b c b 
-    b b e 4 4 4 4 4 4 4 4 4 4 e b b 
-    b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
-    b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
-    b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
-    b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
-    b b 4 4 4 4 4 4 4 4 4 4 4 4 b b 
-    b b d 4 4 4 4 4 4 4 4 4 4 d b b 
-    b b d 4 4 4 4 4 4 4 4 4 4 d b b 
-    b b 4 d 4 4 4 4 4 4 4 4 d 4 b b 
-    b b 4 4 d d d d d d d d 4 4 b b 
-    b b c 4 4 4 4 4 4 4 4 4 4 c b b 
-    b b b c c c c c c c c c c b b b 
-    b c b b b b b b b b b b b b c b 
-    b b b b b b b b b b b b b b b b 
-    `, SpriteKind.Door6)
-doorTo6.setPosition(80, 115)
-doorTo2.setPosition(155, 60)
+    `, SpriteKind.Door13)
+doorTo13.setPosition(80, 5)
 room_Options = [
 "treasure",
 "bats",
@@ -1127,5 +1127,25 @@ room_Options = [
 "nothing",
 "nothing",
 "nothing",
+"nothing",
 "nothing"
 ]
+room_contents = [
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing",
+"nothing"
+]
+RandomizeRooms()
